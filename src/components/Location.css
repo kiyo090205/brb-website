@@ -1,0 +1,134 @@
+.location {
+  padding: 100px 24px;
+  background: var(--color-white);
+}
+
+.location-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.branches-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.branch-card {
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  position: relative;
+  transition: all var(--transition);
+}
+
+.branch-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.branch-card.main-branch {
+  border-color: var(--color-primary);
+  background: linear-gradient(135deg, #fff 0%, rgba(200,84,10,0.04) 100%);
+}
+
+.branch-main-tag {
+  position: absolute;
+  top: -12px;
+  left: 24px;
+  background: var(--color-primary);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.branch-emoji {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.branch-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 16px;
+}
+
+.branch-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.branch-info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.branch-info-row svg {
+  flex-shrink: 0;
+  color: var(--color-primary);
+  margin-top: 2px;
+}
+
+.branch-info-row a {
+  color: var(--color-primary);
+  font-weight: 600;
+  transition: opacity var(--transition);
+}
+
+.branch-info-row a:hover { opacity: 0.75; }
+
+.ojol-section {
+  text-align: center;
+  padding: 40px;
+  background: var(--color-cream);
+  border-radius: var(--radius-xl);
+}
+
+.ojol-title {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.ojol-pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ojol-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: white;
+  border: 1.5px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text);
+  transition: all var(--transition);
+}
+
+.ojol-pill:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+@media (max-width: 900px) {
+  .branches-grid { grid-template-columns: 1fr; }
+}
